@@ -12,6 +12,18 @@ CalmConnect is a comprehensive mental health support platform designed to provid
 - **Community Support**: Connect with others on similar journeys
 - **Secure Platform**: Confidential and private mental health support
 
+## 🛠️ Tech Stack
+
+- **HTML5** - Page structure and semantic markup
+- **CSS3** - Styling and responsive design
+  - Flexbox and Grid for layout
+  - CSS animations and transitions
+  - Media queries for responsiveness
+- **JavaScript (ES6+)** - Interactive functionality
+  - DOM manipulation
+  - Form validation
+  - Dynamic content updates
+ 
 ## 🚀 Getting Started
 
 To run this project locally:
