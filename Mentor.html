@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .main-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #666;
+            margin: 10px 0 20px;
+        }
+
+        .expert-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .expert-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .expert-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .expert-photo {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .expert-photo img {
+            background-position: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .expert-details h2 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .expert-details p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .appointment-form {
+            margin-top: 15px;
+        }
+
+        .appointment-form label {
+            font-size: 14px;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .appointment-form input[type="date"],
+        .appointment-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .appointment-form input[type="submit"] {
+            background-color: #007BFF;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .appointment-form input[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 600px) {
+            .main-container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .header p {
+                font-size: 14px;
+            }
+
+            .expert-details h2 {
+                font-size: 20px;
+            }
+        }
+        button:hover{
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+        a:hover {
+            transform: scale(1.1);
+        }
+        button:active {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>Select Your Expert</h1>
+            <p>Choose an expert to book your session with. Explore our experts for stress relief, fitness, and nutrition guidance.</p>
+        </div>
+        <div class="expert-section">
+            <div class="expert-card">
+                <div class="expert-photo">
+                    <img src="clark.jpg" alt="Stress Relief Expert">
+                </div>
+                <div class="expert-details">
+                    <h2>Dr. Emily Clark</h2>
+                    <p>Stress Relief Specialist</p>
+                    <p>Specializes in relaxation and mindfulness techniques to manage stress and improve mental well-being.</p>
+                </div>
+                <form class="appointment-form" action="#" method="post">
+                    <label for="date1">Choose Appointment Date:</label>
+                    <input type="date" id="date1" name="date1" required>
+                    <input type="submit" value="Book with Dr. Clark">
+                </form>
+            </div>
+            <div class="expert-card">
+                <div class="expert-photo">
+                    <img src="stone.avif" alt="Fitness Training Expert">
+                </div>
+                <div class="expert-details">
+                    <h2>Mr. Michael Stone</h2>
+                    <p>Fitness Training Expert</p>
+                    <p>Guides on strength and conditioning for optimal fitness, tailored to individual needs.</p>
+                </div>
+                <form class="appointment-form" action="#" method="post">
+                    <label for="date2">Choose Appointment Date:</label>
+                    <input type="date" id="date2" name="date2" required>
+                    <input type="submit" value="Book with Mr. Stone">
+                </form>
+            </div>
+            <div class="expert-card">
+                <div class="expert-photo">
+                    <img src="sara.jpg" alt="Nutrition Expert">
+                </div>
+                <div class="expert-details">
+                    <h2>Dr. Sarah Lee</h2>
+                    <p>Nutrition Specialist</p>
+                    <p>Helps create personalized nutrition plans to enhance overall health and support specific fitness goals.</p>
+                </div>
+                <form class="appointment-form" action="#" method="post">
+                    <label for="date3">Choose Appointment Date:</label>
+                    <input type="date" id="date3" name="date3" required>
+                    <input type="submit" value="Book with Dr. Lee">
+                </form>
+            </div>
+            <div class="expert-card">
+                <div class="expert-photo">
+                    <img src="alex.webp" alt="Mental Health Expert">
+                </div>
+                <div class="expert-details">
+                    <h2>Dr. Alex Johnson</h2>
+                    <p>Mental Health Therapist</p>
+                    <p>Provides guidance on coping strategies for mental well-being, focusing on mindfulness and emotional support.</p>
+                </div>
+                <form class="appointment-form" action="#" method="post">
+                    <label for="date4">Choose Appointment Date:</label>
+                    <input type="date" id="date4" name="date4" required>
+                    <input type="submit" value="Book with Dr. Johnson">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

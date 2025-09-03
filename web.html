@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: large;
+        }
+        body{
+            font-size: large;
+        }
+        header{
+            margin: 5px;
+            padding: 10px;
+            width:auto;
+            height:100px;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            position: fixed;
+            margin-bottom: 100px;
+        }
+        .Name{
+            margin: 10px;
+            padding:5px;
+            font-size: larger;
+            font-size: 50px;
+            color: red;
+            display: block;
+        }
+        .links{
+            display: flex;
+            margin-left: 800px;
+            
+        }
+        .links a{
+            text-decoration: dashed;
+            margin: 10px;
+            color: black;
+            font-size: 25px;
+            font-weight: bolder;
+            padding: 10px;
+            
+        }
+        .links a:hover{
+            opacity: 0.5;
+            text-decoration: underline;
+        }
+        h1{
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+        }
+        .butn{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+         button{
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            width: 200px;
+            height: 60px;
+            margin-left: 50px;
+            border: 5px solid whitesmoke;
+            background-color: orangered;
+            color: #f3f3f3;
+            font-weight: bolder;
+            font-size: 1rem;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            animation: shade 0.3s ease-in-out;
+        }
+        .butn button:hover{
+            opacity:0.5;
+        }
+        p{
+            display: block;
+            margin-right: 200px;
+            width:500px;
+            font-size: large;
+        }
+        .inner3{
+            display:flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            background-color: #f3f3f3;
+            border-radius: 10px;
+        }
+        img{
+            border-radius: 10px;
+            width:800px;
+            height: 600px;
+        }
+        .inner4 button{
+            margin:20px;
+            margin-left: 260px;
+
+        }
+        .video{
+            width:400px;
+            height:100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .video img{
+            width:300px;
+            height: 300px;
+            margin-left: 50px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px ;
+        }
+        .suggestions{
+            margin: 5px;
+        height:330px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex:1;
+        background-color: #f3f3f3;
+        box-shadow: 3px 3px 3px 3px;
+        border-radius: 20px;
+        overflow-x: scroll;
+        animation: shade 0.3s ease-in-out;
+        }
+        .inner1{
+            box-shadow: 3px 3px 3px;
+            animation: shade 0.3s ease-in-out;
+        }
+        h2{
+            margin: 20px;
+            padding: 10px;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        a{
+            text-decoration: dashed;
+            color: #f3f3f3;
+        }
+        h1{
+            font-size: 40px;
+        }
+        @keyframes move {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        button:hover{
+            background-color: darkorange;
+            transform: scale(1.1);
+        }
+        a:hover {
+            transform: scale(1.1);
+        }
+        button:active {
+            transform: scale(1);
+        }
+        @keyframes shade {
+            from{
+                transform: translateY(-180px);
+            }
+            to{
+                transform: translateY(0px);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="Name">Calm connect</div>
+        <div class="links">
+        <a href="#">Home</a> <a href="service.html">Service</a>
+        <a href ="Mentor.html">Menter support</a>
+        <a href="About.html">About</a>
+    </div>
+</header>
+    <div class="outer">
+        <div class="inner1">
+            <div class="inner3">
+                <div class="inner4">
+                <p>Mental health experts, like therapists and psychologists, provide support for emotional well-being through counseling and coping strategies. Physical health experts, such as fitness trainers and nutritionists, promote physical wellness through exercise and diet guidance.</p>
+                <button>Appoinment</button>
+            </div>
+            <img src="image.png">
+        </div>
+        </div>
+        <div class="inner">
+        <h1>WHAT YOU ARE LOOKING FOR?</h1>
+        <div class="butn">
+        <button><a href="mental.html">Mental Health</a></button>
+        <button><a href="physicalhealth.html">physical Health</a></button>
+    </div>
+    </div>
+    <h2>Some suggestion that can help you?</h2>
+    <div class="suggestions">
+        <div class="video">
+            <img src="a.png">
+            <img src="b.jpg">
+            <img src="c.jpg">
+            <img src="d.jpg">
+            <img src="e.jpg">
+            <img src="image.png">
+        </div>
+    </div>
+    </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+</html>

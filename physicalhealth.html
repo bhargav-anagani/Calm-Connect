@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Analysis</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box;
+        font-size: large; }
+        body { display: flex;  align-items: center; justify-content: center; text-align: center; padding-top: 100px; }
+        header { margin: 5px; padding: 10px; width: 100%; height: 100px; display: flex; position: fixed; top: 0; justify-content: space-between; }
+        .links { display: flex; }
+        .QUes { margin-top: 30px;font-size: large; display: block; align-items: center; border: 5px solid whitesmoke; width: 1000px; padding: 20px; background-color: #f3f3f3; border-radius: 10px; box-shadow: 3px 3px 3px; }
+        input[type="text"], input[type="number"] { width: 96%; padding: 5px; margin: 10px; border-radius: 5px; height: 50px; background-color: #f3f3f3;font-size:20px; }
+        input[type="submit"] { width: 100%; height: 50px; margin: 20px 0; border-radius: 5px; background-color: #45A049; border: 2px solid whitesmoke; color: #f3f3f3; font-size: large; cursor: pointer; }
+        .solution { border: 5px solid whitesmoke; width: 100%; max-width: 1500px; margin-top: 50px; border-radius: 5px; box-shadow: 2px 2px 2px; padding: 20px; background-color: #f3f3f3; }
+        .exer, .diet { display: flex; flex-wrap: wrap; justify-content: center; }
+        .exer img, .diet img { width: 150px; height: 150px; border-radius: 10px; box-shadow: 3px 3px 3px; margin: 10px; }
+        .inner1 { display: flex; flex-direction: column; align-items: center; }
+        p { font-weight: bold; padding: 10px;
+        font-size: 25px; }
+        header{
+            margin: 5px;
+            padding: 10px;
+            width:auto;
+            height:100px;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            position: fixed;
+            margin-bottom: 100px;
+        }
+        .Name{
+            margin: 10px;
+            padding:5px;
+            font-size: larger;
+            font-size: 50px;
+            color: red;
+            display: block;
+        }
+        .links{
+            display: flex;
+            margin-left: 800px;
+        }
+        .links a{
+            text-decoration: dashed;
+            margin: 10px;
+            color: black;
+            font-size: 20px;
+            font-weight: bolder;
+            padding: 10px;
+            
+        }
+        .links a:hover{
+            opacity: 0.5;
+            text-decoration: underline;
+        }
+        .inner1{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .inner{
+            display: flex;
+            background-color: burlywood;
+        }
+        .inner1 img{
+            width: 400px;
+            height: 300px;
+            margin: 10px;
+            margin-left: 200px;
+            box-shadow: 5px 5px 5px ;
+            border-radius: 5px;
+        } 
+        .outer{
+            background-color: burlywood;
+            padding: 20px;
+        }
+        .abc{
+            display: inline;
+        }
+        h4{
+            background-color: rgb(255, 180, 127);
+            border-radius: 8px;
+            padding: 10px;
+            color: #f3f3f3;
+        }h2{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" style="height: 100%;">
+        <div class="links">
+            <a href="web.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="Mentor.html">Mentor Support</a>
+            <a href="About.html">About</a>
+        </div>
+    </header>
+    <div class="outer">
+        <h2>WE ARE HERE TO CURE YOUR PROBLEM</h2>
+        <div class="inner">
+            <div class="QUes">
+                <h4>Please answer the following questions to find your problem:</h4>
+                <div class="issue">
+                    <div class="akk">
+                    <div class="abc">
+                        <p>Question 1: Do you have any chronic conditions (e.g., diabetes, hypertension)?</p>
+                        <input type="text" class="chronicConditions" placeholder="Give your answer"required>
+                    </div>
+                    <div class="abc">
+                        <p>Question 2: How often do you engage in physical activity or exercise each week?</p>
+                        <input type="text" class="activityLevel" placeholder="Give your answer"required>
+                    </div>
+                    <div class="abc">
+                        <p>Question 3: What is your problem?</p>
+                        <input type="text" class="problem" placeholder="Give your answer" required>
+                    </div>
+                    </div>
+                    <div class="akk">
+                    <p>Age: <input type="number" class="age" placeholder="Enter your age" required></p>
+                    <p>Weight: <input type="text" class="weight" placeholder="Enter your weight (kg)" required></p>
+                    <p>Height: <input type="text" class="height" placeholder="Enter your height (cm)" required></p>
+                    <input type="submit" value="Submit" onclick="calculateBMI()">
+                    <p>Your BMI: <span id="bmiResult">N/A</span></p>
+                </div>
+                </div>
+            </div>
+            <div class="inner1">
+                <img src="fit.jpg" alt="Exercise Image 1">
+                <img src="fit1.jpg" alt="Exercise Image 2">
+                <img src="fit2.jpg" alt="Exercise Image 3">
+                <img src="fit3.jpg" alt="Exercise Image 4">
+            </div>
+        </div>
+
+        <div class="solution" id="solution" style="display:none;">
+            <h2>The Solution Based on Your Inputs</h2>
+            <p>PROBLEM:</p>
+            <div class="problemResult"></div>
+            <p>BMI: <span id="bmiResultDisplay"></span></p>
+            <p>Recommended Exercises:</p>
+            <div class="exer exerciseResult"></div>
+            <p>Recommended Diet:</p>
+            <div class="diet dietResult"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculateBMI() {
+            const weight = parseFloat(document.querySelector('.weight').value);
+            const height = parseFloat(document.querySelector('.height').value);
+            const bmiResult = document.getElementById('bmiResult');
+            const bmiResultDisplay = document.getElementById('bmiResultDisplay');
+            const solutionDiv = document.getElementById('solution');
+            const problemResult = document.querySelector('.problemResult');
+            const exerciseResult = document.querySelector('.exerciseResult');
+            const dietResult = document.querySelector('.dietResult');
+            if (weight > 0 && height > 0) {
+                const bmi = (weight / ((height / 100) ** 2)).toFixed(2);
+                bmiResult.innerText = bmi;
+                bmiResultDisplay.innerText = bmi;
+                const chronicConditions = document.querySelector('.chronicConditions').value;
+                const activityLevel = document.querySelector('.activityLevel').value;
+                const problem = document.querySelector('.problem').value;
+
+                let rootCause = "";
+                let futureProblems = "";
+                let exercises = "";
+                let diet = "";
+
+                if (bmi < 18.5) {
+                    rootCause = "Underweight. Consider consulting a healthcare provider.";
+                    futureProblems = "Risk of malnutrition and decreased immune function.";
+                    exercises = `
+                        <div>
+                            
+                            <p>1. Strength Training</p>
+                            <p>2. Resistance Band Exercises</p>
+                            <img src="one.jpg" alt="Exercise 1">
+                            <img src="two.jpg" alt="Exercise 2">
+                        </div>`;
+                    diet = `
+                        <div>
+                            
+                            <p>Nuts, Avocados, Whole Grains</p>
+                            <img src="nuts.jpg" alt="Nuts">
+                            <img src="avocado.jpg" alt="Avocado">
+                            <img src="grains.jpg" alt="Whole Grains">
+                        </div>`;
+                } else if (bmi >= 18.5 && bmi < 24.9) {
+                    rootCause = "Healthy weight. Keep up the good work!";
+                    futureProblems = "Maintain a balanced lifestyle to avoid weight gain.";
+                    exercises = `
+                        <div>
+                            
+                            <p>1. Running</p>
+                            <p>2. Swimming</p>
+                            <img src="running.jpg" alt="Running">
+                            <img src="swimming.jpg" alt="Swimming">
+                        </div>`;
+                    diet = `
+                        <div>
+                           
+                            <p>Fruits, Vegetables, Lean Proteins</p>
+                            <img src="fruits.jpg" alt="Fruits">
+                            <img src="vegetables.jpg" alt="Vegetables">
+                            <img src="lean_proteins.jpg" alt="Lean Proteins">
+                        </div>`;
+                } else if (bmi >= 25 && bmi < 29.9) {
+                    rootCause = "Overweight. Consider lifestyle changes.";
+                    futureProblems = "Increased risk of heart disease and diabetes.";
+                    exercises = `
+                        <div>
+                            
+                            <p>1. Brisk Walking</p>
+                            <p>2. Cycling</p>
+                            <img src="walking.jpg" alt="Walking">
+                            <img src="cycling.jpg" alt="Cycling">
+                        </div>`;
+                    diet = `
+                        <div>
+                            
+                            <p>Whole Grains, Vegetables, Fruits</p>
+                            <img src="grains.jpg" alt="Whole Grains">
+                            <img src="vegetables.jpg" alt="Vegetables">
+                            <img src="fruits.jpg" alt="Fruits">
+                        </div>`;
+                } else {
+                    rootCause = "Obesity. This poses significant health risks.";
+                    futureProblems = "High risk of heart disease, diabetes, and joint issues.";
+                    exercises = `
+                        <div>
+                            
+                            <p>1. Yoga</p>
+                            <p>2. Low-Impact Aerobics</p>
+                            <img src="yoga.jpg" alt="Yoga">
+                            <img src="aerobics.webp" alt="Aerobics">
+                        </div>`;
+                    diet = `
+                        <div>
+                           
+                            <p>Leafy Greens, Lean Proteins, Healthy Fats</p>
+                            <img src="leaf.jpg" alt="Leafy Greens">
+                            <img src="leanprotiens.jpg" alt="Lean Proteins">
+                            <img src="healthy_fats.jpg" alt="Healthy Fats">
+                        </div>`;
+                }
+
+                problemResult.innerHTML = `Root Cause: ${rootCause} <br/> Future Problems: ${futureProblems}`;
+                exerciseResult.innerHTML = exercises;
+                dietResult.innerHTML = diet;
+
+                solutionDiv.style.display = "block"; 
+            } else {
+                bmiResult.innerText = 'N/A';
+                bmiResultDisplay.innerText = 'N/A';
+                problemResult.innerHTML = '';
+                exerciseResult.innerHTML = '';
+                dietResult.innerHTML = '';
+                solutionDiv.style.display = "none"; 
+            }
+        }
+    </script>
+</body>
+</html>

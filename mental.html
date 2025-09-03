@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to CalmConnect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .h1 {
+            text-align: center;
+            font-size: 50px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .p1 {
+            text-align: center;
+            font-size: 25px;
+            color: #666;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .container {
+            max-width: auto;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: burlywood;
+        }
+        .intro-section {
+            background-color: #ddd;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #444;
+        }
+        .form-section {
+            background-color: #fff;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: auto;
+            margin: 20px;
+            display: flex;
+        }
+        label, .form-section p {
+            font-size: 18px;
+            margin: 10px 0;
+            display: block;
+            color: #333;
+        }
+        input[type="text"], select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+            font-size:30px;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: none;
+            font-size:30px;
+        }
+        header{
+            margin: 5px;
+            padding: 10px;
+            width:auto;
+            height:100px;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            position: fixed;
+            margin-bottom: 100px;
+        }
+        .Name{
+            margin: 10px;
+            padding:5px;
+            font-size: larger;
+            font-size: 50px;
+            color: red;
+            display: block;
+        }
+        .links{
+            display: flex;
+            margin-left: 1000px;
+        }
+        .links a{
+            text-decoration: dashed;
+            margin: 10px;
+            color: black;
+            font-size: 20px;
+            font-weight: bolder;
+            padding: 10px;
+            
+        }
+        .links a:hover{
+            opacity: 0.5;
+            text-decoration: underline;
+        }
+        .Name img{
+            width:150px;
+            height:150px;
+            border-radius: 10px;
+        }.inner2{
+            display: block;
+            margin-left: 60px;
+
+        }
+        .inner2 img{
+            width:250px;
+            height: 250px;
+            box-shadow: 5px 5px 5px;
+            border-radius: 10px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="Name"><img src="logo.png"></div>
+        <div class="links">
+            <a href="web.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="Mentor.html">Mentor Support</a>
+            <a href="About.html">About</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="inner1">
+        <div class="intro-section">
+            <h1 class="h1">Welcome to Our Platform</h1>
+            <p class="p1">Hello! Feel free to share your thoughts. We are here to spread positivity!</p>
+        </div>
+        <h2>Let's start a small conversation to address your mental health</h2>
+        <div class="oiu">
+        <div class="form-section">
+            <form id="symptomForm">
+                <label for="day">How is your day?</label>
+                <input type="text" id="day" name="day" placeholder="Share here...">
+                <label for="reason">What brings you to CalmConnect?</label>
+                <input type="text" id="reason" name="reason" placeholder="Share here...">
+                <label for="feeling-lonely">Are you feeling lonely?</label>
+                <select id="feeling-lonely" name="feeling-lonely">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <label for="self-care">Have you tried any self-care practices before?</label>
+                <input type="text" id="self-care" name="self-care" placeholder="Share here...">
+                
+                <input type="submit" value="Submit">
+            </form>
+            <div class="inner2">
+                <img src="image1.jpg">
+                <img src="image2.webp">
+                <img src="images3.jpg">
+                <img src="images4.jpg">
+            </div>
+        </div>
+
+    </div>
+        <div id="results">
+            <h2>Results</h2>
+            <p id="problem"></p>
+            <p id="futureProblems"></p>
+            <p id="rootCause"></p>
+            <p id="tips"></p>
+        </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('symptomForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const day = document.getElementById('day').value;
+            const reason = document.getElementById('reason').value;
+            const feelingLonely = document.getElementById('feeling-lonely').value;
+            const selfCare = document.getElementById('self-care').value;
+            let problem = '';
+            let futureProblems = '';
+            let rootCause = '';
+            let tips = '';
+            if (reason.toLowerCase().includes("stress")) {
+                problem = "You're experiencing significant stress due to various pressures.";
+                futureProblems = "If unmanaged, this could escalate into chronic stress or burnout, affecting your productivity and health.";
+                rootCause = "Stress can arise from workload, personal expectations, or life changes, which can weigh heavily on your mind.";
+                tips = "It's crucial to adopt stress-relief techniques such as mindfulness, regular physical activity, and connecting with supportive friends.";
+            } else if (reason.toLowerCase().includes("anxiety")) {
+                problem = "It seems you are dealing with anxiety that can feel overwhelming.";
+                futureProblems = "If not addressed, anxiety may lead to panic attacks or social avoidance, impacting your daily life and relationships.";
+                rootCause = "Anxiety is often rooted in fear of the unknown or worrying about future events that feel out of your control.";
+                tips = "Practice grounding techniques, breathing exercises, and consider seeking professional help to develop coping strategies.";
+            } else if (reason.toLowerCase().includes("loneliness") || feelingLonely === "yes") {
+                problem = "You're feeling lonely, which can be quite isolating.";
+                futureProblems = "Loneliness can lead to deeper emotional issues like depression and hinder your ability to form connections.";
+                rootCause = "This feeling often stems from lack of meaningful social interactions or feeling disconnected from others.";
+                tips = "Consider reaching out to friends or family, joining community activities, or even exploring online groups that share your interests.";
+            } else {
+                problem = "You're seeking support and guidance during a challenging time.";
+                futureProblems = "Not addressing these feelings can lead to prolonged distress and affect your mental well-being.";
+                rootCause = "It's commendable that you're looking for help; acknowledging your feelings is the first step towards healing.";
+                tips = "Explore various self-care practices like journaling, meditation, and seeking community resources that can provide assistance.";
+            }
+            document.getElementById('problem').innerText = `Problem: ${problem}`;
+            document.getElementById('futureProblems').innerText = `Potential Future Problems: ${futureProblems}`;
+            document.getElementById('rootCause').innerText = `Root Cause: ${rootCause}`;
+            document.getElementById('tips').innerText = `Tips to Overcome: ${tips}`;
+
+            document.getElementById('results').style.display = 'block'; 
+        });
+    </script>
+</body>
+</html>

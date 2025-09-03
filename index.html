@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmConnect - Mental Health Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: large;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            font-size: large;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 10px solid whitesmoke;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: darkorange;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .features {
+            background-color: #fff;
+            padding: 40px 20px;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature {
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            color: darkorange;
+        }
+
+        .feature p {
+            font-size: 16px;
+        }
+
+        .contact {
+            display: flex;
+            background-color: rgba(244, 165, 96, 0.9);
+            padding: 40px 20px;
+            text-align: center;
+            width: auto;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+
+        .form-group {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: darkorange;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            
+        }
+
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px);
+        }
+
+        input[type="submit"]:hover {
+            background-color: orangered;
+        }
+
+        a {
+            text-decoration: none;
+            color: darkorange;
+            margin: 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 10px;
+            padding: 5px;
+            border: 5px solid #fff;
+        }
+
+        h2 {
+            margin: 10px;
+        }
+        input[type="submit"]:hover{
+            transform: scale(1.1);
+        }
+        @keyframes shade {
+            from{
+                transform: translateY(-200px);
+            }
+            to{
+                transform: translateY(200px);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="CalmConnect Logo" class="logo">
+            <nav>
+                <a href="service.html">service</a>
+                <a href="About.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to CalmConnect</h1>
+            <p>Supporting your mental well-being with resources, guidance, and compassion.</p>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>How We Support You</h2>
+                <div class="feature">
+                    <h3>Personalized Mental Health Resources</h3>
+                    <p>Access curated materials on stress management, self-care, and resilience.</p>
+                </div>
+                <div class="feature">
+                    <h3>Guided Self-Care Practices</h3>
+                    <p>Discover exercises for mindfulness, journaling, and other self-care techniques.</p>
+                </div>
+                <div class="feature">
+                    <h3>Emergency Contact and Crisis Support</h3>
+                    <p>Immediate access to support in times of crisis, with a dedicated emergency contact interface.</p>
+                </div>
+                <div class="feature">
+                    <h3>Community and Peer Support</h3>
+                    <p>Join a supportive community and connect with others facing similar challenges.</p>
+                </div>
+                <div class="feature">
+                    <h3>Confidential and Secure Platform</h3>
+                    <p>Your privacy is a priority; CalmConnect is a secure space to share and grow.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <form action="web.html">
+                    <img src="logo.png">
+                    <h2>CalmConnect Login</h2>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter Your Password" required>
+                    </div>
+                    <input type="submit" value="Login">
+                    <a href="password.html">Forgot Password?</a>
+                </form>
+                <div class="footer">
+                    <p>New to CalmConnect? <a href="singnin.html">Sign Up</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CalmConnect. Your well-being matters to us.</p>
+        </div>
+    </footer>
+</body>
+</html>

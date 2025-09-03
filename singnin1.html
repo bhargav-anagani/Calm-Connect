@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frendly Learning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+            padding: 20px;
+            background-color: rgba(244, 165, 96, 0.9);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            position: relative;
+        }
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border: 5px solid #fff;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 24px;
+            color: #333;
+        }
+        p {
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #333;
+        }
+        input[type="text"], input[type="date"], 
+        .coursetype {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: darkorange;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: orangered;
+        }
+        a {
+            text-decoration: none;
+            color: darkorange;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form action="app.html">
+        <img src="logo.jpg" alt="Logo">
+        <h2>Frendly Learning</h2>
+        <p>School/College Name:<input type="text" required placeholder=" Enter Your College"></p>
+        <p>Standard<input type="text" required placeholder=" What are You studying"></p>
+        <p>Course Type:</p>
+        <select class="coursetype" required>
+            <option value="">-- Select a course --</option>
+            <option value="Mains">JeeMains</option>
+            <option value="Eamcet">Eamcet</option>
+            <option value="Neet">Neet</option>
+            <option value="JEEAdvance">JeeAdvance</option>
+            <option value="others">others</option>
+        </select>
+            <p>Course Type:</p>
+                <select class="coursetype" required>
+                    <option value="">-- Select a course --</option>
+                    <option value="computer science">Computer Science</option>
+                    <option value="ece">ECE</option>
+                    <option value="csd">CSD</option>
+                    <option value="eee">EEE</option>
+                    <option value="csb">CSB</option>
+                    <option value="integrated">Integrated</option>
+                    <option value="law">Law</option>
+                </select>
+            <p>Start Year<input type="date" placeholder="stary year"></p>
+            <p>end year Year<input type="date" placeholder=" stary year"></p>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

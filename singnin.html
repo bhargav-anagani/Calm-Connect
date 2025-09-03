@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frendly Learning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 500px;
+            padding: 20px;
+            background-color: rgba(244, 165, 96, 0.9);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            position: relative;
+        }
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border: 5px solid #fff;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 24px;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #333;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        input[type="email"], input[type="tel"],
+        input[type="password"], input[type="text"], input[type="date"] {
+            margin: 10px;
+            width: 90%;
+            padding: 10px;
+            border: 1px solid whitesmoke;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            
+            margin-top: 20px;
+            border: 2px solid whitesmoke;
+            border-radius: 5px;
+            background-color: green;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            opacity: 0.5;
+        }
+        fieldset {
+            margin-bottom: 30px;
+            padding: 10px;
+            border: 5px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            width:450px;
+        }
+        legend {
+            padding: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            margin-left: 10px;
+            
+        }
+        a {
+            text-decoration: none;
+            color: darkorange;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        h4{
+            margin-bottom: 10px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        span{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="web.html" >
+        <img src="logo.png" alt="Logo">
+        <h2>Calm connect</h2>
+        <h4>-----------------------Fill Your Profile------------------</h4>
+        <p>
+            <label for="fname">First Name<span>*</span></label>
+            <input type="text" name="fname" id="fname" placeholder="Enter First name" required autocomplete="given-name">
+        </p>
+        <p>
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname" placeholder="Enter Last name" autocomplete="given-name">
+        </p>
+        <p>
+            <label for="uid">User ID<span>*</span></label>
+            <input type="text" name="uname" id="uid" placeholder="Enter your user ID" required autocomplete="off">
+        </p>
+        <p>
+            <label for="password1">User Password<span>*</span></label>
+            <input type="password" name="password" id="password1" placeholder="Set your password" required autocomplete="new-password">
+        </p>
+        <p>
+            <label for="password2">Confirm Password<span>*</span></label>
+            <input type="password" name="password" id="password2" placeholder="Confirm Password" required>
+        </p>
+        <p>
+            <label for="dob">Date of Birth<span>*</span></label>
+            <input type="date" name="dob" id="dob" required>
+        </p>
+        <p>
+            <label for="phone">Phone Number<span>*</span></label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter Mobile Number" required>
+        </p>
+        <fieldset>
+            <legend>Gender</legend>
+            <label><input type="radio" class="gender" name="gender" value="male" required> Male</label>
+            <label><input type="radio" class="gender" name="gender" value="female"> Female</label>
+            <label><input type="radio" class="gender" name="gender" value="trans"> Trans</label>
+        </fieldset>
+        <input type="submit" class="submit" value="Register">
+        <div class="footer">
+        </div>
+    </form>
+</body>
+</html>
